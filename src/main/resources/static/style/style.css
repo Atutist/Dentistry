@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+body{
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgba(0, 82, 147, 1);
+    font-size:30px;
+    color: white;
+}
+
+.container{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.burger-menu {
+    display: none;
+    font-family: "Anek Devanagari", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 75;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    float: right;
+    width: 30px;
+    margin: 25px 20px 20px 0px;
+}
+
+.left{
+    float: left;
+    margin: 20px 0px 20px 20px;
+}
+
+.home{
+    float: right;
+    margin: 25px 20px 20px 0px;
+
+}
+
+.home a{
+    color: white;
+}
+
+.clear{
+    clear: both;
+}
+
+
+
+.login-form {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+    padding: 20px;
+}
+
+.authorization-container {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.input-form input[type="text"],
+.input-form input[type="password"] {
+    width: 100%;
+    color: rgba(0, 82, 147, 1);
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid rgba(0, 82, 147, 1);
+    border-radius: 4px; /* Rounded borders on inputs */
+}
+
+.input-form button {
+    background-color: rgba(254, 203, 0, 1);
+    color: rgba(0, 82, 147, 1);
+    font-weight: 800;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.input-form button:hover {
+    background-color: rgba(254, 203, 0, 1);
+}
+
+
+.failMessage {
+    color: red; /* Make fail messages red */
+}
+
+.profile{
+    margin: 20px 40px 20px 40px;
+}
+
+.user-logo{
+    width: 150px;
+}
+
+.center{
+    text-align: center;
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    background-color: rgba(0, 82, 147, 1);
+    color: rgb(0, 39, 71);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patient-box{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.view-patients{
+    background-color: rgba(254, 203, 0, 1);
+    color: rgba(0, 82, 147, 1);
+    height: 60px;
+    width: 100%;
+    border: none;
+    font-weight: 800;
+}
+
+.doctor-schedule{
+    margin: 40px 0px 0px 0px;
+    background-color: rgba(0, 82, 147, 1);
+    padding: 20px;
+    color: white;
+}
+
+.sort{
+    float: right;
+    border: none;
+    background-color: rgba(0, 82, 147, 1);
+    color: white;
+    padding-top: 10px;
+}
+.appointments-list{
+    background-color: rgb(191, 212, 219);
+
+}
+
+.appointments-list ul{
+    padding: 20px 0 20px 0px;
+}
+
+.appointments-list ul li{
+    list-style-type: none;
+    margin: 0 0px 20px 70px;
+    font-weight: 600;
+}
+
+
+.appointments-list{
+    display: none;
+}
+
+.patient-list-wrapper input[type="text"]{
+    border: solid 2px rgba(0, 82, 147, 1);
+    color: rgba(0, 82, 147, 1);
+    width: 100%;
+}
+
+
+
+.patient-list-wrapper{
+    margin: 0 auto;
+    width: 60%;
+}
+
+.patient-list{
+    background-color: rgb(191, 212, 219);
+}
+
+.patient-list li{
+    list-style-type: none;
+    text-align: left;
+    padding: 20px ;
+}
+
+.appointments-table{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.appointments-table tr td{
+    padding: 30px;
+}
+
+.confirm-appointment{
+    border: none;
+    height: 40px;
+    background-color: rgba(254, 203, 0, 1);
+    color: rgba(0, 82, 147, 1);
+    font-weight: 800;
+}
+
+.note-appointment{
+    border: solid 1px rgba(0, 82, 147, 1);
+    width: 100%;
+    height: 70px;
+    text-align: start;
+}
+
+.logout-button{
+    border: none;
+    background-color: rgb(0, 56, 102);
+    color: white;
+    margin: 17px 20px 0px 20px;
+    float: right;
+}
+
+.logout-button:hover{
+    text-decoration: underline;
+}
+
+.book-section{
+    margin: 20px 50px 20px 50px;
+}
+@media only screen and (max-width:1024px){
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .burger-menu {
+        float: left;
+        top: 10px;
+        left: 20px;
+        font-size: 35px;
+
+    }
+
+    .home{
+        display: none;
+    }
+
+    .left{
+        float:right;
+        margin-right: 20px;
+    }
+
+    .icons{
+        display: none;
+    }
+    #menuToggle
+    {
+        display: block;
+        position: relative;
+        top: 25px;
+        left: 20px;
+
+        z-index: 1;
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle a
+    {
+        text-decoration: none;
+        color: white;
+
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover
+    {
+        text-decoration:underline;
+        color: rgba(254, 203, 0, 1);
+    }
+
+
+    #menuToggle input
+    {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+
+        cursor: pointer;
+
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    /*
+    * Just a quick hamburger
+    */
+    #menuToggle span
+    {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: white;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child
+    {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2)
+    {
+        transform-origin: 0% 100%;
+    }
+
+    /*
+    * Transform all the slices of hamburger
+    * into a crossmark.
+    */
+    #menuToggle input:checked ~ span
+    {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: white;
+    }
+
+    /*
+    * But let's hide the middle one.
+    */
+    #menuToggle input:checked ~ span:nth-last-child(3)
+    {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+    * Ohyeah and the last one should go the other direction
+    */
+    #menuToggle input:checked ~ span:nth-last-child(2)
+    {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+    #menu
+    {
+        position: fixed;
+        width: 77%;
+        height: 50vh;
+        margin: -60px 0 0 -20px;
+        padding-top: 70px;
+        box-sizing: border-box;
+
+        background:  rgba(0, 82, 147, 1);
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+
+        /* Initial state of the menu should be transformed up */
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+    }
+
+    #menu li
+    {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    #menuToggle input:checked ~ #menu
+    {
+        transform: translateY(0%);
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+    #menuToggle input:checked ~ ul
+    {
+        transform: none;
+    }
+}
