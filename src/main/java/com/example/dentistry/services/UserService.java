@@ -11,6 +11,8 @@ import com.example.dentistry.repositories.PatientRepository;
 import com.example.dentistry.repositories.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,11 +22,11 @@ import java.util.Optional;
 @AllArgsConstructor
 @Transactional
 public class UserService {
+    private final UserRepository userRepository;
+    private final PatientRepository patientRepository;
+    private final DoctorRepository doctorRepository;
+    private final AdministratorRepository administratorRepository;
 
-    private UserRepository userRepository;
-    private PatientRepository patientRepository;
-    private DoctorRepository doctorRepository;
-    private AdministratorRepository administratorRepository;
 
 
     public User findById(Integer id) {

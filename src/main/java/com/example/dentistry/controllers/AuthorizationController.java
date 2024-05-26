@@ -75,7 +75,7 @@ public class AuthorizationController {
             @RequestParam("password") String password) {
 
         userService.createPatient(name, surname, username, password, phone, Role.PATIENT);
-        return new ModelAndView("redirect:/", "message", "Реєстрація успішна. Будь ласка, увійдіть в систему.");
+        return new ModelAndView("redirect:/register", "message", "Реєстрація успішна. Будь ласка, увійдіть в систему.");
     }
 
     //======Logout====

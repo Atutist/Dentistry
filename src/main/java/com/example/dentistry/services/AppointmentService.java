@@ -128,4 +128,11 @@ public class AppointmentService {
         appointmentRepository.save(appointment);
     }
 
+    public void updateAppointmentStatus(Long appointmentId, String newStatus) {
+        Appointment appointment = appointmentRepository.findById(appointmentId)
+                .orElseThrow(() -> new RuntimeException("Appointment not found: " + appointmentId));
+        appointment.setStatus(newStatus);
+        appointmentRepository.save(appointment);
+    }
+
 }

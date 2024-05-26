@@ -38,19 +38,37 @@
     </header>
     <main>
         <section class="profile">
-            <div class="row">
-                <div class="col-lg-7 center">
-                    <h1>Hello admin, <br> Welcome back!</h1>
-                </div>
-                <div class="col-lg-5 center">
-                    <div class="circle"><h1>User</h1></div>
-                </div>
-            </div>
-            <div class="clear"></div>
-            <div class="center patient-box">
-                <a href="/admin/registerNewUser"><button class="view-patients">Create new User</button></a>
-                <a href="/admin/appointments" ><button class="view-patients" style="margin-top: 20px">Change status of appointment</button></a>
-            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Doctor Name</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${appointments}" var="appointment">
+                    <tr>
+                        <td>${appointment.patient.name} ${appointment.patient.surname}</td>
+                        <td>${appointment.doctor.name} ${appointment.doctor.surname}</td>
+                        <td>${appointment.dateTime}</td>
+                        <td>${appointment.status}</td>
+                        <td>
+                            <form action="/admin/updateAppointmentStatus" method="post">
+                                <input type="hidden" name="id" value="${appointment.id}">
+                                <select name="status" onchange="this.form.submit()">
+                                    <option value="Confirmed" ${appointment.status == 'Confirmed' ? 'selected' : ''}>Confirmed</option>
+                                    <option value="Cancelled" ${appointment.status == 'Cancelled' ? 'selected' : ''}>Cancelled</option>
+                                    <option value="Pending" ${appointment.status == 'Pending' ? 'selected' : ''}>Pending</option>
+                                </select>
+                            </form>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
         </section>
     </main>
     <footer>
