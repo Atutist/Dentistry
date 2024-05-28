@@ -56,17 +56,6 @@ public class UserService {
         doctorRepository.save(newDoctor);
     }
 
-    public void createAdministrator(String name, String surname, String username, String password, String phone, Role role) {
-        Administrator newAdministrator = new Administrator();
-        newAdministrator.setName(name);
-        newAdministrator.setSurname(surname);
-        newAdministrator.setUsername(username);
-        newAdministrator.setPassword(password);
-        newAdministrator.setPhone(phone);
-        newAdministrator.setRole(role);
-        administratorRepository.save(newAdministrator);
-    }
-
     public Patient findPatientById(Integer id) {
         return patientRepository.findById(id).orElse(null);
     }
